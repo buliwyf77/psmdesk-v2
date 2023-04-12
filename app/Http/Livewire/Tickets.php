@@ -34,7 +34,7 @@ class Tickets extends Component implements HasForms
         $this->menu = [
             'All tickets',
             'Unassigned',
-            'Assigned to me',
+            'My assigned tickets',
             'Created by me',
         ];
         $this->activeMenu = $this->menu[0];

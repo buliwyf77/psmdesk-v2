@@ -7,7 +7,7 @@
     },
     "engines": {
         "node": "18.x",
-        "npm": "7.x"
+        "npm": "8.x"
     },
     "devDependencies": {
         "@alpinejs/focus": "^3.10.3",

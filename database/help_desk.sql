@@ -92,12 +92,6 @@ VALUES (1, 'Google', null,
         '<p>Meta Platforms, Inc., better known by the trade name Meta, is an American company created in 2004 by Mark Zuckerberg. It is one of the giants of the Web, grouped under the acronym GAFAM, alongside Google, Apple, Amazon and Microsoft.</p>',
         1, 5, NULL, '2022-09-24 23:46:26', '2022-09-24 23:46:47');
 
-TRUNCATE TABLE model_has_roles;
-INSERT INTO `model_has_roles` (`role_id`, `model_type`, `model_id`)
-VALUES (1, 'App\\Models\\User', 4),
-       (2, 'App\\Models\\User', 5),
-       (3, 'App\\Models\\User', 6);
-
 TRUNCATE TABLE permissions;
 INSERT INTO `permissions` (`id`, `name`, `guard_name`, `created_at`, `updated_at`)
 VALUES (1, 'View all projects', 'web', '2022-09-25 14:51:10', '2022-09-25 14:51:10'),
@@ -211,5 +205,12 @@ VALUES (1, 1),
        (42, 1),
        (43, 1),
        (44, 1);
+
+TRUNCATE TABLE model_has_roles;
+INSERT INTO `model_has_roles` (`role_id`, `model_type`, `model_id`)
+VALUES (1, 'App\\Models\\User', 4),
+       (2, 'App\\Models\\User', 5),
+       (3, 'App\\Models\\User', 6);
+
 
 SET foreign_key_checks = 1;
