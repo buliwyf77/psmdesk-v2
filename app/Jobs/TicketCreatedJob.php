@@ -35,7 +35,7 @@ class TicketCreatedJob implements ShouldQueue
      */
     public function handle()
     {
-        $users = User::whereNull('register_token')->get();
+        $users = User::whereNotNull('register_token')->get();
         foreach ($users as $user) {
             if (auth()->user()->can('View all tickets') && $this->ticket->owner_id !== $user->id) { 
                 $user->notify(new TicketCreatedNotification($this->ticket, $user));
